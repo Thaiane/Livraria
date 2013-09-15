@@ -18,11 +18,8 @@ public class Funcionario extends Pessoa
 		this.salarioFuncionario = salario;
 		this.cpfFuncionario = cpf;
 		this.clientesCadastrados = null;
-		
-		
 	}
 		
-	
 	public double getSalarioFuncionario() 
 	{
 		return salarioFuncionario;
@@ -42,26 +39,21 @@ public class Funcionario extends Pessoa
 	{
 		this.cpfFuncionario = cpfFuncionario;
 	}
-
 	
 	public Produto[] get_ProdutosParaAtualizar() 
 	{
 		return produtosParaAtualizar;
 	}
 
-
 	public void set_ProdutosParaAtualizar(Produto[] produtosParaAtualizar) 
 	{
 		this.produtosParaAtualizar = produtosParaAtualizar;
 	}
 
-
 	public Cliente[] get_ClientesCadastrados() 
 	{
 		return clientesCadastrados;
 	}
-
-
 	
 	public void set_ClientesCadastrados(Cliente[] clientesCadastrados) 
 	{

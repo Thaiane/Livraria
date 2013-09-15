@@ -21,8 +21,7 @@ public class Consulta implements Exibivel
 	}
 
 	public void set_ListaProduto( Produto[] listaProduto )
-	{
-		
+	{		
 		this.listaProduto = listaProduto;
 	}
 	
@@ -73,8 +72,7 @@ public class Consulta implements Exibivel
 		
 		novosLivros[ novosLivros.length - 1 ] = livroNovo;
 		
-		this.set_ListaLivro( novosLivros );
-		
+		this.set_ListaLivro( novosLivros );		
 	}
 
 	public void cadastrarListaCD( CD CDNovo )
@@ -90,11 +88,10 @@ public class Consulta implements Exibivel
 		
 		novosCDS[ novosCDS.length - 1 ] = CDNovo;
 		
-		this.set_ListaCDS( novosCDS );
-		
+		this.set_ListaCDS( novosCDS );	
 	}
 	
-	public void cadastrarListaDVD( Livro DVDNovo )
+	public void cadastrarListaDVD( DVD DVDNovo )
 	{
 		int tamanhoAntigo = this.listaDVDs.length;
 		
