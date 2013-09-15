@@ -1,18 +1,15 @@
 package pessoas;
 
-<<<<<<< HEAD
-import java.util.Scanner;
-
 import produtos.Produto;
+import pessoas.Cliente;
 
 public class Funcionario extends Pessoa
 {
 	private double salarioFuncionario;
 	private int[]  cpfFuncionario = {0,0,0,0,0,0,0,0,0,0,0};
 	private Cliente[] clientesCadastrados = {};
+	private Produto[] produtosParaAtualizar = {};
 	
-	
-	Scanner leitor = new Scanner(System.in);
 	
 	public Funcionario(String nome, String telefone, double salario, int[] cpf)
 	{
@@ -46,8 +43,19 @@ public class Funcionario extends Pessoa
 		this.cpfFuncionario = cpfFuncionario;
 	}
 
-
 	
+	public Produto[] get_ProdutosParaAtualizar() 
+	{
+		return produtosParaAtualizar;
+	}
+
+
+	public void set_ProdutosParaAtualizar(Produto[] produtosParaAtualizar) 
+	{
+		this.produtosParaAtualizar = produtosParaAtualizar;
+	}
+
+
 	public Cliente[] get_ClientesCadastrados() 
 	{
 		return clientesCadastrados;
@@ -78,61 +86,32 @@ public class Funcionario extends Pessoa
 
 	public void solicitarProduto(Produto produto)
 	{
+		if(produto.get_FornecedorProduto() != null)
+		{
+			System.out.println("\tOlá! \n\t Seu produto foi solicitado ao fornecedor "
+			+ produto.get_FornecedorProduto() + " e chegará em breve na loja.");
+		}
+		else
+		{
+			System.out.println("\tOlá.\n\tInfelizmente não temos fornecedor cadastrado para o" +
+					" produto solicitado. Iremos procurar um e solicitar seu produto em breve.");
+		}
 		
 	}
 
-	
-	
-
-		
-=======
-import sistema.Endereco;
-
-public class Funcionario extends Pessoa {
-	private double salarioFuncionario;
-	private Endereco endereco;
-
-	public Funcionario(String nomePessoa, String telefonePessoa,
-			double salarioFuncionario, Endereco endereco) {
-		super(nomePessoa, telefonePessoa);
-		this.salarioFuncionario = salarioFuncionario;
-		this.endereco = endereco;
+	public void efetuarCompra(Cliente cliente)
+	{
+		if(cliente.get_ProdutosSelecionados() != null)
+		{
+			this.produtosParaAtualizar = cliente.get_ProdutosSelecionados();
+			for (int i = 0; i < produtosParaAtualizar.length ; i++)
+			{
+				int quantidadeAnterior = 0;
+				quantidadeAnterior = produtosParaAtualizar[i].get_QuantidadeEstoque();
+				
+				produtosParaAtualizar[i].set_QuantidadeEstoque(quantidadeAnterior);
+			}
+		}
 	}
-
-	/**
-	 * @return the salarioFuncionario
-	 */
-	public double get_SalarioFuncionario() {
-		return salarioFuncionario;
-	}
-
-	/**
-	 * @param salarioFuncionario
-	 *            the salarioFuncionario to set
-	 */
-	public void set_SalarioFuncionario(double salarioFuncionario) {
-		this.salarioFuncionario = salarioFuncionario;
-	}
-
-	/**
-	 * @return the endereco
-	 */
-	public Endereco get_Endereco() {
-		return endereco;
-	}
-
-	/**
-	 * @param endereco
-	 *            the endereco to set
-	 */
-	public void set_Endereco(Endereco endereco) {
-		this.endereco = endereco;
-	}
->>>>>>> c962edbd786bfbecc66de6f4b69e7bf83b8e7b8a
-
-		
-		
-		
-		
-	
+			
 }

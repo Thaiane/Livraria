@@ -1,6 +1,6 @@
 package pessoas;
 
-<<<<<<< HEAD
+
 import produtos.*;
 
 public class Cliente extends Pessoa
@@ -96,74 +96,6 @@ public class Cliente extends Pessoa
 	public void cadastrarAtendente(Funcionario funcionario)
 	{
 		this.atendente = funcionario;
-=======
-import java.sql.Date;
-
-import sistema.CarroCompras;
-import sistema.Endereco;
-
-public class Cliente extends Pessoa {
-	private Date dataNascimento;
-	private CarroCompras carroCompras;
-	private Endereco endereco;
-
-	public Cliente(String nomePessoa, String telefonePessoa) {
-		super(nomePessoa, telefonePessoa);
-
-	}
-
-	public Cliente(String nomePessoa, String telefonePessoa,
-			Date dataNascimento, CarroCompras carroCompras, Endereco endereco) {
-		super(nomePessoa, telefonePessoa);
-		this.dataNascimento = dataNascimento;
-		this.carroCompras = carroCompras;
-		this.endereco = endereco;
-	}
-
-	/**
-	 * @return the dataNascimento
-	 */
-	public Date get_DataNascimento() {
-		return dataNascimento;
-	}
-
-	/**
-	 * @param dataNascimento
-	 *            the dataNascimento to set
-	 */
-	public void set_DataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
-
-	/**
-	 * @return the carroCompras
-	 */
-	public CarroCompras get_CarroCompras() {
-		return carroCompras;
-	}
-
-	/**
-	 * @param carroCompras
-	 *            the carroCompras to set
-	 */
-	public void set_CarroCompras(CarroCompras carroCompras) {
-		this.carroCompras = carroCompras;
-	}
-
-	/**
-	 * @return the endereco
-	 */
-	public Endereco get_Endereco() {
-		return endereco;
-	}
-
-	/**
-	 * @param endereco
-	 *            the endereco to set
-	 */
-	public void set_Endereco(Endereco endereco) {
-		this.endereco = endereco;
->>>>>>> c962edbd786bfbecc66de6f4b69e7bf83b8e7b8a
 	}
 
 	public void atualizarValorCompra()

@@ -2,7 +2,7 @@ package pessoas;
 
 import produtos.Produto;
 
-<<<<<<< HEAD
+
 public class Autor extends Pessoa
 {
 	
@@ -42,30 +42,5 @@ public class Autor extends Pessoa
 		
 		this.set_ProdutosAutor(novosProdutos);
 	}
-
-=======
-public class Autor extends Pessoa {
-	private Produto[] produtos;
-
-	public Autor(String nomePessoa, String telefonePessoa, Produto[] produtos) {
-		super(nomePessoa, telefonePessoa);
-		this.produtos = produtos;
-	}
-
-	/**
-	 * @return the produtos
-	 */
-	public Produto[] get_Produtos() {
-		return produtos;
-	}
-
-	/**
-	 * @param produtos
-	 *            the produtos to set
-	 */
-	public void set_Produtos(Produto[] produtos) {
-		this.produtos = produtos;
-	}
->>>>>>> c962edbd786bfbecc66de6f4b69e7bf83b8e7b8a
 
 }
