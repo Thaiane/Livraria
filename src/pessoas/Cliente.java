@@ -89,11 +89,12 @@ public class Cliente extends Pessoa
 		}
 	}
 
-	public Funcionario get_Atendente() {
+	public Funcionario get_Atendente() 
+	{
 		return atendente;
 	}
 
-	public void cadastrarAtendente(Funcionario funcionario)
+	public void setAtendente(Funcionario funcionario)
 	{
 		this.atendente = funcionario;
 	}
