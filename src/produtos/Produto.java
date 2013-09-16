@@ -25,12 +25,14 @@ public abstract class Produto // Provavelmente será abstrata ( Testar primeiro)
 	}
 	
 	
-	public int get_QuantidadeEstoque() {
+	public int get_QuantidadeEstoque() 
+	{
 		return quantidadeEstoque;
 	}
 
 
-	public void set_QuantidadeEstoque(int quantidadeEstoque) {
+	public void set_QuantidadeEstoque(int quantidadeEstoque) 
+	{
 		this.quantidadeEstoque = quantidadeEstoque;
 	}
 

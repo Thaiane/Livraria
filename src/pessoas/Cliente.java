@@ -17,8 +17,7 @@ public class Cliente extends Pessoa
 		this.dataNasciento = data;
 		this.produtosSelecionados = null;
 		this.valorCompras = 0.00;
-		this.atendente = null;
-		
+		this.atendente = null;	
 	}
 	
 	public Cliente()

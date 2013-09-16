@@ -1,14 +1,15 @@
 package interfaces;
 
-public interface Exibivel {
+public interface Exibivel 
+{
 	
-	public void exibirListaLivro( );
+	public void exibir_ListaLivro( );
 	
-	public void exibirListaDVD( );
+	public void exibir_ListaDVD( );
 	
-	public void exibirListaCD( );
+	public void exibir_ListaCD( );
 	
-	public void exibirListaProduto();
+	public void exibir_ListaProduto();
 	
 
 }

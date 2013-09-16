@@ -22,11 +22,6 @@ public class Livro extends Produto
 		return this.editoraLivro;
 	}
 	
-	public void adicionarEditora (Editora editora)
-	{
-		this.editoraLivro = editora;
-	}
-	
 	public void exibirDados()
 	{
 		System.out.println("\tTítulo: " + this.nomeProduto + "\n\tFormato: Livro \n\tCódigo: " + this.codigoProduto + 

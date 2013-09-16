@@ -5,39 +5,15 @@ import pessoas.Cliente;
 
 public class Funcionario extends Pessoa
 {
-	private double salarioFuncionario;
-	private long   cpfFuncionario;
-	private Cliente[] clientesCadastrados = {};
-	private Produto[] produtosParaAtualizar = {};
+	private Cliente[] clientesCadastrados;
+	private Produto[] produtosParaAtualizar;
 	
 	
-	public Funcionario(String nome, String telefone, double salario, long cpf)
+	public Funcionario(String nome, String telefone)
 	{
 		super (nome, telefone);
 		
-		this.salarioFuncionario = salario;
-		this.cpfFuncionario = cpf;
 		this.clientesCadastrados = null;
-	}
-		
-	public double get_SalarioFuncionario() 
-	{
-		return salarioFuncionario;
-	}
-
-	public void set_SalarioFuncionario(double salarioFuncionario) 
-	{
-		this.salarioFuncionario = salarioFuncionario;
-	}
-
-	public long get_CpfFuncionario() 
-	{
-		return cpfFuncionario;
-	}
-
-	public void set_CpfFuncionario(long cpfFuncionario) 
-	{
-		this.cpfFuncionario = cpfFuncionario;
 	}
 	
 	public Produto[] get_ProdutosParaAtualizar() 

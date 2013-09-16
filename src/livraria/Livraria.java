@@ -11,7 +11,7 @@ public class Livraria
 		Scanner entrada = new Scanner( System.in );
 		
 		Cliente     cliente     = new Cliente( "Alberto", "3356-9287", "17/ 12/ 1990" );
-		Funcionario funcionario = new Funcionario( "Andressa", "3434-6642", 720.80, 312343551 );
+		Funcionario funcionario = new Funcionario( "Andressa", "3434-6642" );
 		
 		int opcaoMenuPrincipal = 0;
 		
@@ -65,7 +65,6 @@ public class Livraria
 								
 								break;
 							case 4:
-								funcionario.efetuar_Compra( cliente );
 								
 								break;
 							case 5:

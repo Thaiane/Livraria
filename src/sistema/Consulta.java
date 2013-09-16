@@ -5,24 +5,38 @@ import produtos.*;
 
 public class Consulta implements Exibivel
 {
-	private Produto[] listaLivro = {};
-	private Produto[] listaCDS = {};
-	private Produto[] listaDVDs = {};
-	private Produto[] listaProduto = {};
+	private Produto[] listaLivro;
+	private Produto[] listaCDS;
+	private Produto[] listaDVDs;
+	private Produto[] listaProduto;
 
-	public Consulta( ) // usar padrão singleton
+	public Consulta( )
 	{
-
+	}
+	
+	public void set_ListaProduto( Produto[] listaProduto )
+	{		
+		this.listaProduto = listaProduto;
+	}
+	
+	public void set_ListaLivro( Produto[] listaLivro ) 
+	{
+		this.listaLivro = listaLivro;
+	}
+	
+	public void set_ListaCDS( Produto[] listaCDS ) 
+	{
+		this.listaCDS = listaCDS;
+	}
+	
+	public void set_ListaDVDs( Produto[] listaDVDs )
+	{
+		this.listaDVDs = listaDVDs;
 	}
 	
 	public Produto[] get_ListaProduto( ) 
 	{
 		return this.listaProduto;
-	}
-
-	public void set_ListaProduto( Produto[] listaProduto )
-	{		
-		this.listaProduto = listaProduto;
 	}
 	
 	public Produto[] get_ListaLivro( ) 
@@ -30,36 +44,17 @@ public class Consulta implements Exibivel
 		return listaLivro;
 	}
 
-	public void set_ListaLivro( Produto[] listaLivro ) 
-	{
-		this.listaLivro = listaLivro;
-	}
-
-
 	public Produto[] get_ListaCDS( ) 
 	{
 		return listaCDS;
 	}
 
-
-	public void set_ListaCDS( Produto[] listaCDS ) 
-	{
-		this.listaCDS = listaCDS;
-	}
-
-
 	public Produto[] get_ListaDVDs( ) 
 	{
 		return listaDVDs;
 	}
-
-
-	public void set_ListaDVDs( Produto[] listaDVDs )
-	{
-		this.listaDVDs = listaDVDs;
-	}
 	
-	public void cadastrarListaLivro( Livro livroNovo )
+	public void cadastrar_ListaLivro( Livro livroNovo )
 	{
 		int tamanhoAntigo = this.listaLivro.length;
 		
@@ -75,7 +70,7 @@ public class Consulta implements Exibivel
 		this.set_ListaLivro( novosLivros );		
 	}
 
-	public void cadastrarListaCD( CD CDNovo )
+	public void cadastrar_ListaCD( CD CDNovo )
 	{
 		int tamanhoAntigo = this.listaCDS.length;
 		
@@ -91,7 +86,7 @@ public class Consulta implements Exibivel
 		this.set_ListaCDS( novosCDS );	
 	}
 	
-	public void cadastrarListaDVD( DVD DVDNovo )
+	public void cadastrar_ListaDVD( DVD DVDNovo )
 	{
 		int tamanhoAntigo = this.listaDVDs.length;
 		
@@ -107,7 +102,7 @@ public class Consulta implements Exibivel
 		this.set_ListaDVDs( novosDVDs );
 	}
 	
-	public void cadastrarListaProduto( Produto produtoNovo )
+	public void cadastrar_ListaProduto( Produto produtoNovo )
 	{
 		int tamanhoAntigo = this.listaProduto.length;
 		
@@ -138,7 +133,7 @@ public class Consulta implements Exibivel
 		
 	}
 
-	public void exibirListaLivro( )
+	public void exibir_ListaLivro( )
 	{
 		if ( listaLivro.length == 0 )
 		{
@@ -152,7 +147,7 @@ public class Consulta implements Exibivel
 		}
 	}
 	
-	public void exibirListaDVD( )
+	public void exibir_ListaDVD( )
 	{
 		if ( listaDVDs.length == 0 )
 		{
@@ -166,7 +161,7 @@ public class Consulta implements Exibivel
 		}		
 	}
 	
-	public void exibirListaCD( )
+	public void exibir_ListaCD( )
 	{
 		if ( listaCDS.length == 0 )
 		{
@@ -180,7 +175,7 @@ public class Consulta implements Exibivel
 		}
 	}
 	
-	public void exibirListaProduto()
+	public void exibir_ListaProduto()
 	{
 		if ( listaProduto.length == 0 )
 		{
