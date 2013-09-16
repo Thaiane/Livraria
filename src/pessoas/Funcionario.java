@@ -6,12 +6,12 @@ import pessoas.Cliente;
 public class Funcionario extends Pessoa
 {
 	private double salarioFuncionario;
-	private int[]  cpfFuncionario = {0,0,0,0,0,0,0,0,0,0,0};
+	private long   cpfFuncionario;
 	private Cliente[] clientesCadastrados = {};
 	private Produto[] produtosParaAtualizar = {};
 	
 	
-	public Funcionario(String nome, String telefone, double salario, int[] cpf)
+	public Funcionario(String nome, String telefone, double salario, long cpf)
 	{
 		super (nome, telefone);
 		
@@ -20,22 +20,22 @@ public class Funcionario extends Pessoa
 		this.clientesCadastrados = null;
 	}
 		
-	public double getSalarioFuncionario() 
+	public double get_SalarioFuncionario() 
 	{
 		return salarioFuncionario;
 	}
 
-	public void setSalarioFuncionario(double salarioFuncionario) 
+	public void set_SalarioFuncionario(double salarioFuncionario) 
 	{
 		this.salarioFuncionario = salarioFuncionario;
 	}
 
-	public int[] getCpfFuncionario() 
+	public long get_CpfFuncionario() 
 	{
 		return cpfFuncionario;
 	}
 
-	public void setCpfFuncionario(int[] cpfFuncionario) 
+	public void set_CpfFuncionario(long cpfFuncionario) 
 	{
 		this.cpfFuncionario = cpfFuncionario;
 	}
@@ -60,7 +60,7 @@ public class Funcionario extends Pessoa
 		this.clientesCadastrados = clientesCadastrados;
 	}
 
-	public void cadastrarCliente(Cliente clienteNovo)
+	public void cadastrar_Cliente(Cliente clienteNovo)
 	{
 		int tamanhoAntigo = this.clientesCadastrados.length;
 		
@@ -76,7 +76,7 @@ public class Funcionario extends Pessoa
 		this.set_ClientesCadastrados(novosClientes);
 	}
 
-	public void solicitarProduto(Produto produto)
+	public void solicitar_Produto(Produto produto)
 	{
 		if(produto.get_FornecedorProduto() != null)
 		{
@@ -91,7 +91,7 @@ public class Funcionario extends Pessoa
 		
 	}
 
-	public void efetuarCompra(Cliente cliente)
+	public void efetuar_Compra(Cliente cliente)
 	{
 		if(cliente.get_ProdutosSelecionados() != null)
 		{

@@ -42,7 +42,6 @@ public class Cliente extends Pessoa
 	{
 		return dataNasciento;
 	}
-
 	
 	public double get_ValorCompras() 
 	{
@@ -79,7 +78,7 @@ public class Cliente extends Pessoa
 		{
 			if(this.atendente != null)
 			{
-				atendente.solicitarProduto(produtoNovo);
+				atendente.solicitar_Produto(produtoNovo);
 			}
 			else
 			{

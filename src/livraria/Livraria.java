@@ -1,12 +1,17 @@
 package livraria;
 
 import java.util.Scanner;
+import pessoas.Cliente;
+import pessoas.Funcionario;
 
 public class Livraria
 {
 	public static void main( String[] args )
 	{
 		Scanner entrada = new Scanner( System.in );
+		
+		Cliente     cliente     = new Cliente( "Alberto", "3356-9287", "17/ 12/ 1990" );
+		Funcionario funcionario = new Funcionario( "Andressa", "3434-6642", 720.80, 312343551 );
 		
 		int opcaoMenuPrincipal = 0;
 		
@@ -42,10 +47,11 @@ public class Livraria
 						
 						imprimir_Linha();
 						
-						System.out.print( "\n[ 1 ] Calcular valor das Compras" +
-								  				"\n[ 2 ] Mostrar produtos Comprados" +
-								  				"\n[ 3 ] Efetuar Compra"    	       +
-								  				"\n[ 4 ] Voltar ao Menu Principal"   +
+						System.out.print( "\n[ 1 ] Calcular valor das Compras"   +
+												"\n[ 2 ] Adicionar produto às Compras" +
+								  				"\n[ 3 ] Mostrar produtos Comprados"   +
+								  				"\n[ 4 ] Efetuar Compra"    	         +
+								  				"\n[ 5 ] Voltar ao Menu Principal"     +
 								  				"\n\nOpção selecionada: " );
 						opcaoMenuCompras = entrada.nextInt();
 						
@@ -59,9 +65,11 @@ public class Livraria
 								break;
 							case 4:
 								break;
+							case 5:
+								break;
 						}
 						
-					} while( opcaoMenuCompras != 4 );
+					} while( opcaoMenuCompras != 5 );
 					
 					break;
 					
@@ -76,10 +84,10 @@ public class Livraria
 						
 						imprimir_Linha();
 						
-						System.out.print( "\n[ 1 ] "   +
-								  				"\n[ 2 ] "   +
-								  				"\n[ 3 ] "   +
-								  				"\n[ 4 ] "   +
+						System.out.print( "\n[ 1 ] Cadastrar Cliente"        +
+								  				"\n[ 2 ] Cadastrar Fornecedor"     +
+								  				"\n[ 3 ] Cadastrar Produto"        +
+								  				"\n[ 4 ] Voltar ao Menu Principal" +
 								  				"\n\nOpção selecionada: " );
 						opcaoMenuCadastro = entrada.nextInt();
 						
@@ -110,10 +118,10 @@ public class Livraria
 						
 						imprimir_Linha();
 						
-						System.out.print( "\n[ 1 ] "   +
-								  				"\n[ 2 ] "   +
-								  				"\n[ 3 ] "   +
-								  				"\n[ 4 ] "   +
+						System.out.print( "\n[ 1 ] Consultar Livros Cadastrados" +
+								  				"\n[ 2 ] Consultar CDs Cadastrados"    +
+								  				"\n[ 3 ] Consultar DVDs Cadastrados"   +
+								  				"\n[ 4 ] Voltar ao Menu Principal"     +
 								  				"\n\nOpção selecionada: " );
 						opcaoMenuConsultas = entrada.nextInt();
 						
@@ -144,10 +152,10 @@ public class Livraria
 						
 						imprimir_Linha();
 						
-						System.out.print( "\n[ 1 ] "   +
-								  				"\n[ 2 ] "   +
-								  				"\n[ 3 ] "   +
-								  				"\n[ 4 ] "   +
+						System.out.print( "\n[ 1 ] Solicitar Livro a Fornecedor" +
+								  				"\n[ 2 ] Solicitar CD a Fornecedor"    +
+								  				"\n[ 3 ] Solicitar DVD a Fornecedor"   +
+								  				"\n[ 4 ] Voltar ao Menu Principal"     +
 								  				"\n\nOpção selecionada: " );
 						opcaoMenuSolicitacoes = entrada.nextInt();
 						
