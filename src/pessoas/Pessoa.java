@@ -18,22 +18,22 @@ public class Pessoa
 		this.telefonePessoa = telefone;
 	}
 	
-	public String getNomePessoa() 
+	public String get_NomePessoa() 
 	{
 		return nomePessoa;
 	}
 
-	public void setNomePessoa(String nomePessoa) 
+	public void set_NomePessoa(String nomePessoa) 
 	{
 		this.nomePessoa = nomePessoa;
 	}
 
-	public String getTelefonePessoa() 
+	public String get_TelefonePessoa() 
 	{
 		return telefonePessoa;
 	}
 
-	public void setTelefonePessoa(String telefonePessoa) 
+	public void set_TelefonePessoa(String telefonePessoa) 
 	{
 		this.telefonePessoa = telefonePessoa;
 	}

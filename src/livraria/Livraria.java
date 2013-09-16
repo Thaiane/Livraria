@@ -62,8 +62,11 @@ public class Livraria
 							case 2:
 								break;
 							case 3:
+								
 								break;
 							case 4:
+								funcionario.efetuar_Compra( cliente );
+								
 								break;
 							case 5:
 								break;
@@ -94,7 +97,10 @@ public class Livraria
 						switch( opcaoMenuCadastro )
 						{
 							case 1:
+								funcionario.cadastrar_Cliente( cliente );
+								
 								break;
+								
 							case 2:
 								break;
 							case 3:

@@ -30,11 +30,13 @@ public class Cliente extends Pessoa
 		this.atendente = null;
 	}
 
-	public Produto[] get_ProdutosSelecionados() {
+	public Produto[] get_ProdutosSelecionados() 
+	{
 		return produtosSelecionados;
 	}
 
-	public void set_ProdutosSelecionados(Produto[] produtosSelecionados) {
+	public void set_ProdutosSelecionados(Produto[] produtosSelecionados) 
+	{
 		this.produtosSelecionados = produtosSelecionados;
 	}
 
@@ -53,7 +55,7 @@ public class Cliente extends Pessoa
 		this.dataNasciento = dataNasciento;
 	}
 	
-	public void selecionarProduto(Produto produtoNovo)
+	public void selecionar_Produto(Produto produtoNovo)
 	{
 		
 		int quantidade = produtoNovo.get_QuantidadeEstoque();
@@ -93,12 +95,12 @@ public class Cliente extends Pessoa
 		return atendente;
 	}
 
-	public void setAtendente(Funcionario funcionario)
+	public void set_Atendente(Funcionario funcionario)
 	{
 		this.atendente = funcionario;
 	}
 
-	public void atualizarValorCompra()
+	public void atualizar_ValorCompra()
 	{
 		double valorCompra = 0.00;
 		int tamanho = produtosSelecionados.length;
