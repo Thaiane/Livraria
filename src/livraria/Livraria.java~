@@ -21,7 +21,7 @@ public class Livraria
 			
 			System.out.println( "\nMenu Principal" );
 			
-		     		+
+			System.out.print( "\n[ 1 ] Compras"      		+
 									"\n[ 2 ] Cadastros"    	   +
 									"\n[ 3 ] Consultas"		   +
 									"\n[ 4 ] Solicitações"     +
