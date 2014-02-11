@@ -14,7 +14,7 @@ public class Estudio extends Fornecedor
 	
 	public void set_DvdsEstudio( DVD[ ] dvds )
 	{
-		
+		this.dvdsEstudio = dvds;
 	}
 	
 	public DVD[ ] get_DvdsEstudio( )
